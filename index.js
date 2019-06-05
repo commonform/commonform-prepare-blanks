@@ -48,14 +48,11 @@ function validDirections (argument, stringKey) {
 }
 
 function validBlank (blank) {
-  console.log('%s is %j', 'blank', blank)
   return (
     Array.isArray(blank) &&
     blank.length !== 0 &&
     blank.every(function (element, index) {
       var mod = index % 3
-      console.log('%s is %j', 'mod', mod)
-      console.log('%s is %j', 'element', element)
       if (mod === 0) return element === 'content'
       if (mod === 1) {
         return (
