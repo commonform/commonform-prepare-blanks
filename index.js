@@ -2,8 +2,7 @@ module.exports = function (values, directions) {
   if (Array.isArray(values)) {
     if (validDirections(values, 'value')) return values
     throw new Error('invalid values')
-  }
-  if (typeof values !== 'object') {
+  } else if (typeof values !== 'object' || !values) {
     throw new Error('invalid values')
   }
   if (directions) {
